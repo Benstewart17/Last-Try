@@ -35,3 +35,6 @@ ul {
   position: relative;
   margin-top: -35px;
 }
+.weather-app {
+  max-width: 600px;
+}
