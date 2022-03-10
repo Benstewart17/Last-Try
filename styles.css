@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: whitesmoke;
+  background-color: lightcyan;
 }
 h1 {
   color: #7c7c7c;
@@ -37,4 +37,15 @@ ul {
   max-width: 600px;
   box-shadow: 0 0 10px 5px black;
   background-color: aliceblue;
+}
+.code-link {
+  text-decoration: none;
+}
+.entire-app {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+}
+.description {
+  text-transform: capitalize;
 }

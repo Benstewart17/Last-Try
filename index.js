@@ -1,14 +1,22 @@
-function changeNumber(event) {
+function changeToFarenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   let temperature = temperatureElement.innerHTML;
   temperature = Number(temperature);
-  temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
+  temperatureElement.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
 }
-let farenheit = document.querySelector("#f");
-farenheit.addEventListener("click", changeNumber);
 
-//
+function changeToCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let farenheit = document.querySelector("#farenheit");
+farenheit.addEventListener("click", changeToFarenheit);
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", changeToCelsius);
 
 let dateElement = document.querySelector("#date");
 let now = new Date();
@@ -25,10 +33,10 @@ let day = days[now.getDay()];
 
 dateElement.innerHTML = ` ${day} ${hour}:${minute}`;
 
-//
-
 function displayWeather(response) {
   console.log(response);
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].description;
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -39,6 +47,13 @@ function displayWeather(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+
+  celsiusTemperature = response.data.main.temp;
 }
 function update(weatherHere) {
   document.querySelector("#city").innerHTML = weatherHere.data.name;
@@ -72,6 +87,8 @@ function findCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(currentLocation);
 }
+
+let celsiusTemperature = null;
 
 document.querySelector("#search-form").addEventListener("submit", changeCity);
 let currentButton = document.querySelector("#current-location-button");

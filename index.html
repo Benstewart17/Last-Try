@@ -15,62 +15,74 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="weather-app">
-        <form class="search-form" id="search-form">
+    <div class="entire-app">
+      <div class="container">
+        <div class="weather-app">
+          <form class="search-form" id="search-form">
+            <div class="row">
+              <div class="col-6">
+                <input
+                  type="search"
+                  placeholder="Type a city"
+                  class="form-control shadow-sm"
+                  id="type-city"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="form-control btn btn-primary shadow-sm"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Current"
+                  class="form-control btn-success btn shadow-sm"
+                  id="current-location-button"
+                />
+              </div>
+            </div>
+          </form>
+          <h1 id="city">pheonix, arizona</h1>
+          <ul>
+            <li id="date">Wednesday 22:00</li>
+            <li id="description" class="description">Partly Cloudy</li>
+          </ul>
           <div class="row">
             <div class="col-6">
-              <input
-                type="search"
-                placeholder="Type a city"
-                class="form-control shadow-sm"
-                id="type-city"
+              <img
+                src="https://openweathermap.org/img/wn/10d@2x.png"
+                alt="image"
+                id="icon"
+                class="weather-icon"
               />
+              <span class="temperature" id="temperature"> 27</span>
+              <span class="units"
+                ><a href="#" id="celsius">°C</a> |
+                <a class="link" id="farenheit" href="#">°F </a>
+              </span>
             </div>
-            <div class="col-3">
-              <input
-                type="submit"
-                value="Search"
-                class="form-control btn btn-primary shadow-sm"
-              />
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity">0</span>%</li>
+                <li>wind speed: <span id="wind">0</span> km/h</li>
+              </ul>
             </div>
-            <div class="col-3">
-              <input
-                type="submit"
-                value="Current"
-                class="form-control btn-success btn shadow-sm"
-                id="current-location-button"
-              />
-            </div>
-          </div>
-        </form>
-        <h1 id="city">pheonix, arizona</h1>
-        <ul>
-          <li id="date">Wednesday 22:00</li>
-          <li>Partly Cloudy</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-              alt="Cloudy image"
-              class="weather-icon"
-            />
-            <span class="temperature" id="temperature"> 27</span>
-            <span class="units"
-              >°C | <a class="link" id="f" href="#">°F </a>
-            </span>
-          </div>
-          <div class="col-6">
-            <ul>
-              <li>Humidity: <span id="humidity">0</span>%</li>
-              <li>wind speed: <span id="wind">0</span> km/h</li>
-            </ul>
           </div>
         </div>
       </div>
+      <div class="source">
+        <a
+          class="code-link"
+          target="blank"
+          href="https://github.com/Benstewart17/Last-Try/find/main"
+          >Open-source code</a
+        >
+        <span> by Ben Stewart</span>
+      </div>
     </div>
-
     <script src="index.js"></script>
   </body>
 </html>
