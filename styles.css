@@ -6,6 +6,7 @@ h1 {
   font-size: 24px;
   font-weight: 400;
   line-height: 40px;
+  text-transform: capitalize;
 }
 li {
   color: #7c7c7c;
