@@ -1,5 +1,10 @@
 body {
   font-family: Arial, sans-serif;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(62, 74, 145),
+    rgba(68, 68, 67, 0.664)
+  );
 }
 h1 {
   color: #7c7c7c;
@@ -34,4 +39,5 @@ ul {
   padding: 20px;
   border-radius: 15px;
   max-width: 600px;
+  box-shadow: 5, 5, 5 black;
 }
