@@ -20,13 +20,6 @@ ul {
   margin: 0;
   padding: 0 0 20;
 }
-.container {
-  border: solid 1px #7c7c7c;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 15px;
-  max-width: 600px;
-}
 .temperature {
   font-size: 64px;
   font-weight: 100;
@@ -35,6 +28,10 @@ ul {
   position: relative;
   margin-top: -35px;
 }
-.weather-app {
+.container {
+  border: solid 1px #7c7c7c;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 15px;
   max-width: 600px;
 }
