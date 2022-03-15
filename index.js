@@ -97,7 +97,38 @@ function findCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(currentLocation);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  
+    <div class="col-2">
+      <div class="forecast-date">${day}</div>
+      <img
+        class="forecast-icon"
+        src="https://openweathermap.org/img/wn/10d@2x.png"
+        alt=""
+      />
+      <div class="forecast-temp">
+        <span class="forecast-max-temp"> 18° </span>
+        <span class="forecast-min-temp"> 12° </span>
+      </div>
+    </div>
+  
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let celsiusTemperature = null;
+
+displayForecast();
 
 document.querySelector("#search-form").addEventListener("submit", changeCity);
 let currentButton = document.querySelector("#current-location-button");
