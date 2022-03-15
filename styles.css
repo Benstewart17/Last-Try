@@ -68,3 +68,8 @@ ul {
 .forecast-min-temp {
   opacity: 60%;
 }
+.units {
+  text-decoration: none;
+  position: relative;
+  margin-top: -40px;
+}
