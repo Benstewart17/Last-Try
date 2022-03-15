@@ -49,3 +49,22 @@ ul {
 .description {
   text-transform: capitalize;
 }
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+.forecast-date {
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 60%;
+}
+.forecast-icon {
+  max-width: 55px;
+  max-height: 55px;
+}
+.forecast-temp {
+  font-weight: 600;
+}
+.forecast-min-temp {
+  opacity: 60%;
+}
